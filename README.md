@@ -3,7 +3,7 @@ PingPongGame
 Language: Java  
 IDE: Netbeans  
   
-1. Bruce Leeds wins the most. Serena Williamson loses the most.  
+#1. Bruce Leeds wins the most. Serena Williamson loses the most.  
   
 When I was constructing my solution, I had to consider the following factors:  
 - Serving first provides an advantage of winning a game  
@@ -27,4 +27,4 @@ I've noticed Bruce Leeds and Jean Claude Van Dime win percentages were really cl
 But by running a very large number of samples, I was about to find exact convergent points of
 each player's win percentage.  
   
-2. 600,000 samples (100,000 for each game arrangement)
+#2. 600,000 samples (100,000 for each game arrangement)  
