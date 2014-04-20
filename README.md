@@ -27,5 +27,4 @@ I've noticed Bruce Leeds and Jean Claude Van Dime win percentages were really cl
 But by running a very large number of samples, I was about to find exact convergent points of
 each player's win percentage.  
   
-
-2. 600,000 samples (100,000 for each game arrangement)  
+2. 600,000 samples (100,000 for each game arrangement)
