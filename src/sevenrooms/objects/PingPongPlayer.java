@@ -56,27 +56,17 @@ public class PingPongPlayer
     {
         EnumMap<ShotTypes,Integer> hit_shot_threshold = new EnumMap<ShotTypes,Integer>(ShotTypes.class);
         ShotTypes prevEntryKey = null; // Keep track of previous shot type inside for loop
-        
+        Integer prevthreshold = 0;
+
         // Calculate max range percent of each shot type 
         for(Map.Entry<ShotTypes,Integer> entry : hit_shot_percentages.entrySet())
         {
             ShotTypes currentKey = entry.getKey();
             Integer currentValue = entry.getValue();
+            prevthreshold = prevthreshold + currentValue; 
             
-            // First item already has max percent
-            if(prevEntryKey == null)
-            {
-                hit_shot_threshold.put(currentKey, currentValue);
-            }
-            
-            // Second item and above need to be calculated
-            else
-            {
-                // Add previous max percent with current hit percent to get max range for current shot type
-                hit_shot_threshold.put(currentKey, hit_shot_threshold.get(prevEntryKey) + currentValue);
-            }
-            
-            prevEntryKey = entry.getKey(); // Store the current key as previous key for the next iteration
+            hit_shot_threshold.put(currentKey, prevthreshold);
+        
         }
         
         return hit_shot_threshold;
